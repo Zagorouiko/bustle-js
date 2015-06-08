@@ -1,0 +1,17 @@
+<h1>Headlines</h1>
+<button class="btn" type="submit" {{action 'previousArticle'}}><span class="glyphicon glyphicon-arrow-left"></span></button>
+<button class="btn" type="submit" {{action 'nextArticle'}}><span class="glyphicon glyphicon-arrow-right"></span></button>
+<br>
+<br>
+<img class="whatever" {{bind-attr src=startPicture}}>
+<h2>VR News</h2>
+{{#link-to 'vrArticle'}}<img src="https://dbvc4uanumi2d.cloudfront.net/cdn/4.4.26/wp-content/themes/oculus/img/order/dk2-product.jpg"><p>VR</p>{{/link-to}}
+
+<h2>Video Game News</h2>
+{{#link-to 'vgArticle'}}<img src="http://www.cliquebeleza.net/wp-content/uploads/2012/04/imagens-video-game-playstation-3.jpg"><p>PS3</p>{{/link-to}}
+
+<h2>Mobile Games Article</h2>
+{{#link-to 'mobileGamesArticle'}}<img src="http://img.talkandroid.com/uploads/2013/02/project-shield-open-left.png"/>{{/link-to}}
+
+{{outlet}}
+<p>News about Oculus Rift</p>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+    <script src="libs/jquery-1.11.1.js"></script>
+    <script src="libs/ember-template-compiler-1.10.0.js"></script>
+    <script src="libs/ember-1.10.0.debug.js"></script>
+    <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+    <script src="libs/ember-data-1.0.0-beta.15.js"></script>
+    <script src="libs/localstorage-adapter-0.5.1.js"></script>
+
+    <script src ="bustle.js"></script>
+    <script src ="router.js"></script>
+
+    <script>
+      EmberHandlebarsLoader.loadTemplates(['headlines', 'application', 'news', 'vrArticle', 'vgArticle', 'mobileGamesArticle']);
+    </script>
+
+  </head>
+  <body>
+    <script type="text/x-handlebars" data-template-name="main">
+    Carousel
+    {{view Ember.ContainerView currentViewBinding="selectedView"}}
+    {{#view Ember.Button action="previous" targetBinding="controller"}}Previous{{/view}}
+    {{#view Ember.Button action="next" targetBinding="controller"}}Next{{/view}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="aTemplate">
+        The A View
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="bTemplate">
+        The B View
+    </script>
+    <script type="text/x-handlebars" data-template-name="cTemplate">
+        The C View
+    </script>
+  </body>
+</html>
